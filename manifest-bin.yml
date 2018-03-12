@@ -1,0 +1,10 @@
+---
+applications:
+- name: gotty-jk
+  buildpack: https://github.com/cloudfoundry/binary-buildpack
+  path: builds/pkg/linux_amd64
+  command: ./gotty-cf-bash -w bash
+  memory: 128m
+  env:
+    GOPACKAGENAME: main
+    TERM: "xterm-256color"
